@@ -1,2 +1,97 @@
 # Washing machine
 properties:
+  # ==========================================
+  # PROGRAMMER & INDSTILLINGER (Selects)
+  # ==========================================
+
+  # Valg af Vaskeprogram
+  - property: Selected_program_ID
+    select:
+      options:
+        6: "Tromlerengøring"
+        7: "Bomuld"
+        8: "Syntetisk"
+        9: "ECO 40-60"
+        10: "Uld"
+        11: "Hurtig 15´"
+        12: "Mix"
+        14: "Centrifugering"
+        15: "Allergipleje"
+        16: "Babytøj"
+        17: "Mørk Vask"
+        18: "Sportstøj"
+        20: "Rinse+Spin"
+        21: "Silke / Delikat"
+        24: "Skjorter"
+        44: "Sengetøj"
+        45: "Jeans"
+        49: "Daglig Vask"
+        51: "AI Supervask"
+        52: "Effekt: Hastighed 39´" 
+
+  - property: Softener
+    icon: mdi:flower-tulip-outline
+    select:
+      options:
+        0: "Fra"
+        1: Auto
+        2: Mindre
+        3: Normal
+        4: Mere
+
+  - property: Detergent
+    icon: mdi:chart-bubble
+    select:
+      options:
+        0: "Fra"
+        1: Auto
+        2: Mindre
+        3: Normal
+        4: Mere       
+
+  - property: DownLight
+    icon: mdi:lightbulb
+    entity_category: config
+    switch:
+
+  - property: Stain_removal
+    icon: mdi:flower-tulip-outline
+    entity_category: config
+    select:
+      options:
+        0: "off"
+        1: Vin
+        2: Græs
+        3: Jord
+        4: Kaffe
+        5: Mælk
+        6: Juice
+        7: Sved
+        8: Blod 
+        9: Olie     
+
+  - property: Current_program_phase
+    sensor:
+      read_only: true
+      device_class: enum
+      options:
+        0: not_available
+        1: Vejer
+        2: Forvask
+        3: Vasker
+        4: Skyller
+        5: Forvarmning Færdig
+        7: Centrifugerer
+        10: Vask Afsluttet
+        11: Tidsforskydning Venter       
+
+  - property: ApplicationPermissions
+    hide: false
+    sensor:
+      read_only: true
+      device_class: enum
+      options:
+        0: "disabled"
+        1: "enabled"
+        2: "not_granted"
+        3: "granted"          
