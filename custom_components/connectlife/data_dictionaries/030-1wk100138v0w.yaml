@@ -10,7 +10,7 @@ properties:
     optional: false
 
   - property: Language
-    ignore: true
+    optional: true
 
   - property: parse_lib_ver
-    ignore: true
+    optional: true
