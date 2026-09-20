@@ -7,10 +7,10 @@ properties:
         1: stop
         2: start
         3: pause
-    optional: true
+    optional: false
 
   - property: Language
     disabled: true
 
-  - property: ParseLibVersion
+  - property: parse_lib_ver
     disabled: true
