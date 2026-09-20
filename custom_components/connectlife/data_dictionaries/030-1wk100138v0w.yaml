@@ -8,3 +8,9 @@ properties:
         2: start
         3: pause
     optional: true
+
+  - property: Language
+    disabled: true
+
+  - property: ParseLibVersion
+    disabled: true
