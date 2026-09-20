@@ -1,0 +1,10 @@
+properties:
+  - property: Actions
+    icon: mdi:play-pause
+    select:
+      options:
+        0: none
+        1: stop
+        2: start
+        3: pause
+    optional: true
