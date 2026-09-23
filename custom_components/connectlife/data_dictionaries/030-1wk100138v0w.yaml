@@ -10,7 +10,38 @@ properties:
     optional: false
 
   - property: Language
-    hide: true
+    optional: true
 
   - property: parse_lib_ver
-    hide: true
+    optional: true
+
+  - property: ScreenSaverTime
+    entity_category: config
+    optional: true
+    icon: mdi:timer-sand
+    select:
+      options:
+        2: "2 min"
+        4: "4 min"
+        6: "6 min"
+
+  - property: DownLight_LightTime
+    entity_category: config
+    optional: true
+    icon: mdi:timer-sand
+    select:
+      options:
+        1: "1 min"
+        2: "2 min"
+        3: "3 min"
+
+  - property: ApplicationPermissions
+    optional: true
+    sensor:
+      read_only: true
+      device_class: enum
+      options:
+        0: "disabled"
+        1: "enabled"
+        2: "not_granted"
+        3: "granted"
